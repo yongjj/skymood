@@ -22,7 +22,7 @@ public class SkyMoodOpenHelper extends SQLiteOpenHelper {
 			+ "id integer primary key autoincrement, "
 			+ "county_name text, "
 			+ "county_code text, "
-			+ "citr_id integer)";
+			+ "city_id integer)";
 	
 	public SkyMoodOpenHelper (Context context, String name, CursorFactory factory, int version) {
 		super(context, name, factory, version);
