@@ -1,6 +1,7 @@
 package com.skymood.app.activity;
 
 import com.skymood.app.R;
+import com.skymood.app.service.AutoUpdateService;
 import com.skymood.app.util.HttpCallbackListener;
 import com.skymood.app.util.HttpUtil;
 import com.skymood.app.util.Utility;
@@ -147,6 +148,9 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		currentDateText.setText(prefs.getString("current_date", ""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
+		
+		Intent intent = new Intent(this, AutoUpdateService.class);
+		startService(intent);
 	}
 
 }
